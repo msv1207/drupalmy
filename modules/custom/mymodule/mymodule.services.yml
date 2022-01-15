@@ -1,0 +1,4 @@
+services:
+  mymodule.apicontroller:
+    class: Drupal\mymodule\Controller\APIController
+    arguments: ['@database']

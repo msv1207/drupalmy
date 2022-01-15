@@ -1,0 +1,9 @@
+mymodule.admin_index:
+  title: 'My Module Settings'
+  parent: system.admin_config
+  route_name: mymodule.admin_index
+
+mymodule.admin_form:
+  title: 'My Module Settings'
+  parent: mymodule.admin_index
+  route_name: mymodule.admin_form

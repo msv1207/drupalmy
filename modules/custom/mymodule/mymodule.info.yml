@@ -1,0 +1,9 @@
+name: MyModule module
+type: module
+description: This module was deveoped for learning Drupal 8 purposes.
+core_version_requirement: ^8.8 || ^9
+package: Custom
+
+# just to show the ability to use dependencies.
+dependencies:
+  - drupal:devel

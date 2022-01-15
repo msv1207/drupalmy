@@ -1,0 +1,20 @@
+<h4 class="box-title">Test module block</h4>
+
+{{ breakpoint() }}
+{% if items %}
+    {% for item in items %}
+        <div class="media">
+            <div class="media-left">
+                {% if item.image_url %}
+                    <a href="{{ item.url }}" title="{{ item.title }}">
+                        <img class="media-object img-responsive" src="{{ item.image_url }}" alt="{{ item.title }}">
+                    </a>
+                {% endif %}
+            </div>
+            <div class="media-body">
+                <h4 class="title"><a href="{{ item.url }}">{{ item.title }}</a></h4>
+                <p class="date">{{ item.date }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endif %}

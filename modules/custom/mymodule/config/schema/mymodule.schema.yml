@@ -1,0 +1,7 @@
+mymodule.settings:
+  type: config_object
+  label: 'MyModule Settings'
+  mapping:
+    test_module_param:
+      type: text
+      label: 'Test Module Param'

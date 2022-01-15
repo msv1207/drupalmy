@@ -1,0 +1,31 @@
+# /api/mobile/v1/aggregate/?format=json
+api_action_aggregate:
+  path: 'api/mobile/v1/aggregate'
+  defaults:
+    _controller: '\Drupal\mymodule\Controller\APIController::aggregate'
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+api_action_data_feed:
+  path: 'feed/poi/v2'
+  defaults:
+    _controller: '\Drupal\mymodule\Controller\FeedController::v2'
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+# Admin Panel
+mymodule.admin_index:
+  path: '/admin/config/services'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'My Module Settings'
+  requirements:
+    _permission: 'access administration pages'
+mymodule.admin_form:
+  path: '/admin/config/services/mymodule'
+  defaults:
+    _form: '\Drupal\mymodule\Form\MyModuleSettingsForm'
+    _title: 'My Module Settings'
+  requirements:
+    _permission: 'access administration pages'
